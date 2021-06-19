@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style media="screen">
+    .q1{
+      margin-top: 10px;
+      display:block;
+      width:100%;
+    }
+
+    .tableauPlaceholder{
+      width: 1200px;
+      border-style: solid;
+      display: inline-block;
+      box-sizing: border-box;
+      border-radius: 5px;
+      border-color: #70503F;
+
+    }
+
+    .sidebar{
+      width: 20%;
+      height: 300px;
+      display: block;
+      border-style: solid;
+      border-color: #70503F;
+      box-sizing: border-box;
+      border-radius: 5px;
+      float: left;
+      overflow: auto;
+    }
+
+    .sidebar a{
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      width: 100%;
+      text-align: left;
+      background-color: white;
+      font-size: 16px;
+    }
+
+    .dropdown-btn {
+      display: block;
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      width: 111%;
+      text-align: left;
+      background-color: white;
+      font-size: 16px;
+      border-style: none;
+    }
+
+    .sidebar a:hover, .dropdown-btn:hover{
+      background-color: #8C6528;
+      color: white;
+    }
+
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="home.html" class="active">DASHBOARD KELOMPOK 5 3SD1</a>
+      <div id="myLinks">
+        <a href="home.html">Home</a>
+        <a href="metadata.html">Metadata</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"> &nbsp;MENU</i>
+      </a>
+    </div>
+
+    <div style="padding-left:16px">
+      <h3></h3>
+      <p></p>
+      <p></p>
+    </div>
+    <!-- End smartphone / tablet look -->
+    </div>
+
+    <div class="q1">
+      <div class="sidebar">
+          <a class="active" href="map.html">Peta Tematik</a>
+          <a href="line.html">Line Chart</a>
+          <button class="dropdown-btn">Circle Chart
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="circleAPM.html">APM</a>
+            <a href="circleAPS.html">APS</a>
+            <a href="circleAPK.html">APK</a>
+            <a href="circleABH.html">ABH</a>
+          </div>
+          <button class="dropdown-btn">Bar Chart
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <a href="barAPM.html">APM</a>
+            <a href="barAPS.html">APS</a>
+            <a href="barAPK.html">APK</a>
+            <a href="barABH.html">ABH</a>
+          </div>
+      </div>
+      <div class='tableauPlaceholder' id='viz1622562869415' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='dbabh ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16219302216210&#47;dbabh&#47;1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='Project_16219302216210&#47;dbabh' />
+          <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+          <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project_16219302216210&#47;dbabh&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+    </div>
+
+
+
+    <div class="H">
+
+    </div>
+
+    <div class="footer">
+      <p style="text-align:left;">
+          &emsp;Copyright &copy; Kelompok 5 3SD1
+          <span style="float:right;">
+              Adi Habibi Harahap | Alfi Nurrahmah | Elsa Kartika Vitriani Marpaung | Irvan Permana Bustami | Lara Ayu Cahyaningtyas&emsp;
+          </span>
+      </p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
+    </script>
+
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1622562869415');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1200px';vizElement.style.height='877px';}
+      else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1200px';vizElement.style.height='877px';}
+      else { vizElement.style.width='100%';vizElement.style.height='727px';}
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+  </body>
+</html>

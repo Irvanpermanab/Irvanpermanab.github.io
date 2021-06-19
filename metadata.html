@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: "Lato", sans-serif;}
+
+    /* Style the tab */
+    .tab {
+      float: left;
+      border: 1px solid #ccc;
+      background-color: #70503F;
+      width: 30%;
+      height: 259px;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+      display: block;
+      background-color: inherit;
+      color: white;
+      padding: 22px 16px;
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+      background-color: #ddd;
+    }
+
+    /* Create an active/current "tab button" class */
+    .tab button.active {
+      background-color: #8C6528;
+    }
+
+    /* Style the tab content */
+    .tabcontent{
+      float: left;
+      padding: 0px 12px;
+      border: 1px solid #ccc;
+      width: 70%;
+      border-left: none;
+      height: 1000px;
+    }
+
+    td{
+      padding: 20px;
+      align-self: baseline;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+      <a href="home.html" class="active">DASHBOARD KELOMPOK 5 3SD1</a>
+      <div id="myLinks">
+        <a href="home.html">Home</a>
+        <a href="metadata.html">Metadata</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"> &nbsp;MENU</i>
+      </a>
+    </div>
+
+    <div style="padding-left:16px">
+      <h3></h3>
+      <p></p>
+      <p></p>
+    </div>
+    <!-- End smartphone / tablet look -->
+    </div>
+
+    <div class="tab">
+      <button class="tablinks" onclick="openVar(event, 'APM')" id="defaultOpen">APM</button>
+      <button class="tablinks" onclick="openVar(event, 'APS')">APS</button>
+      <button class="tablinks" onclick="openVar(event, 'APK')">APK</button>
+      <button class="tablinks" onclick="openVar(event, 'Buta Huruf')">ABH</button>
+    </div>
+
+    <div id="APM" class="tabcontent">
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp; APM</h3>
+      <table class="view-table">
+      	<tbody><tr>
+      		<td width="150" class="label">Nama Indikator</td>
+      		<td>Angka Partisipasi Murni (APM)</td>
+      	</tr>
+      		<tr>
+      		<td class="label">Konsep Definisi</td>
+      		<td>Proporsi dari penduduk kelompok usia sekolah tertentu yang sedang bersekolah tepat di jenjang pendidikan yang seharusnya (sesuai antara umur penduduk dengan ketentuan usia bersekolah di jenjang tersebut) terhadap penduduk kelompok usia sekolah yang bersesuain. Sejak tahun 2007, Pendidikan Non Formal (Paket A, Paket B, Paket C) turut diperhitungkan</td>
+      	</tr>
+
+      	<tr>
+      		<td class="label">Rumusan</td>
+      		<td>
+      			<img style="max-width:100%" src="http://sirusa.bps.go.id/webadmin/indikator/Angka_Partisipasi_Murni_(APM).jpg" alt=""><br>		</td>
+      	</tr>
+      			<tr>
+      			<td class="label">Kegunaan</td>
+
+      			<td>- Untuk menunjukkan seberapa besar penduduk yang bersekolah tepat waktu, atau menunjukkan seberapa besar penduduk yang bersekolah dengan umur yang sesuai dengan ketentuan kelompok usia sekolah di jenjang pendidikan yang sedang ditempuh</td>
+      	</tr>
+      				<tr>
+      			<td class="label">Interpretasi</td>
+
+      			<td>Nilai APM berkisar antara 0-100. APM menunjukkan seberapa banyak penduduk usia sekolah yang sudah dapat memanfaatkan fasilitas pendidikan sesuai pada jenjang pendidikannya. Bila seluruh anak usia sekolah dapat bersekolah tepat waktu, maka APM akan mencapai 100 persen.
+      Secara umum, APM akan selalu lebih rendah dari APK karena APK memperhitungkan jumlah penduduk di luar usia sekolah pada jenjang pendidikan yang bersangkutan
+      Contoh:
+      APM SMP Kabupaten Deli Serdang Tahun 2013 sebesar 64,71 persen, artinya sekitar 65 persen penduduk di Kabupaten Deli Serdang yang berusia 13-15 tahun bersekolah tepat waktu dijenjang SMP/sederajad</td>
+      	</tr>
+      </tbody></table>
+      <div class="H">
+
+      </div>
+    </div>
+
+    <div id="APS" class="tabcontent">
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp; APS</h3>
+      <table class="view-table">
+            	<tbody><tr>
+            		<td width="150" class="label">Nama Indikator</td>
+            		<td>Angka Partisipasi Sekolah (APS)</td>
+            	</tr>
+            		<tr>
+            		<td class="label">Konsep Definisi</td>
+            		<td>Proporsi dari penduduk kelompok usia sekolah tertentu yang sedang bersekolah (tanpa memandang jenjang pendidikan yang ditempuhi) terhadap penduduk kelompok usia sekolah yang bersesuaian. Sejak tahun 2007, Pendidikan Non Formal (Paket A, Paket B, dan Paket C) turut diperhitungkan</td>
+            	</tr>
+
+            	<tr>
+            		<td class="label">Rumusan</td>
+            		<td>
+            			<img style="max-width:100%" src="http://sirusa.bps.go.id/webadmin/indikator/Angka_Partisipasi_Sekolah_(APS).jpg" alt=""><br>		</td>
+            	</tr>
+            			<tr>
+            			<td class="label">Kegunaan</td>
+
+            			<td>Untuk mengetahui seberapa banyak penduduk usia sekolah yang sudah memanfaatkan fasilitas pendidikan</td>
+            	</tr>
+            				<tr>
+            			<td class="label">Interpretasi</td>
+
+            			<td>Nilai APS berkisar antara 0-100. Makin tinggi APS berarti makin banyak anak usia sekolah yang bersekolah di suatu daerah. APS yang tinggi menunjukkan terbukanya peluang yang lebih besar dalam mengakses pendidikan secara umum. Pada kelompok kelompok umur mana peluang tersebut terjadi dapat dilihat dari besarnya APS pada setiap kelompok umur.
+            Contoh:
+            APS 7-12 tahun Kabupaten Ketapang Tahun 2013 sebesar 95,44 persen, artinya sekitar 95 persen penduduk berusia 7-12 tahun di Kabupaten Ketapang sedang bersekolah</td>
+            	</tr>
+            </tbody></table>
+          </div>
+
+          <div id="APK" class="tabcontent">
+            <h3>&nbsp;&nbsp;&nbsp;&nbsp; APK</h3>
+            <table class="view-table">
+      	<tbody><tr>
+      		<td width="150" class="label">Nama Indikator</td>
+      		<td>Angka Partisipasi Kasar (APK)</td>
+      	</tr>
+      		<tr>
+      		<td class="label">Konsep Definisi</td>
+      		<td>Perbandingan antara jumlah penduduk yang masih bersekolah di jenjang pendidikan tertentu (tanpa memandang usia penduduk tersebut) dengan jumlah penduduk yang memenuhi syarat resmi penduduk usia sekolah di jenjang pendidikan yang sama. Sejak tahun2007, Pendidikan Non Formal (Paket A, Paket B, dan Paket C) turut diperhitungkan.</td>
+      	</tr>
+
+      	<tr>
+      		<td class="label">Rumusan</td>
+      		<td>
+      			<img style="max-width:100%" src="http://sirusa.bps.go.id/webadmin/indikator/Angka_Partisipasi_Kasar_(APK).jpg" alt=""><br>		</td>
+      	</tr>
+      			<tr>
+      			<td class="label">Kegunaan</td>
+
+      			<td>- Untuk menunjukkan berapa besar umumnya tingkat partisipasi penduduk pada suatu tingkat pendidikan.
+      - Untuk menunjukkan berapa besar kapasitas sistem pendidikan dapat menampung siswa dari kelompok usia sekolah tertentu.
+      - Sebagai indikator pelengkap dari indikator Angka Partisipasi Murni (APM), sehingga dapat ditunjukkan besarnya penduduk yang bersekolah pada suatu jenjang namun usianya belum mencukupi atau bahkan melebihi dari usia sekolah yang seharusnya</td>
+      	</tr>
+      				<tr>
+      			<td class="label">Interpretasi</td>
+
+      			<td>Nilai APK bisa lebih dari 100 persen karena populasi murid yang bersekolah pada suatu jenjang pendidikan tertentu mencakup anak di luar batas usia sekolah pada jenjang pendidikan tersebut. Penyebabnya adalah adanya pendaftaran siswa usia dini, pendaftaran siswa yang telat bersekolah, atau pengulangan kelas. Hal ini juga dapat menunjukkan bahwa wilayah tersebut mampu menampung penduduk usia sekolah lebih dari target yang sesungguhnya. APK yang tinggi menunjukkan tingginya tingkat partisipasi sekolah, tanpa memperhatikan ketepatan usia sekolah pada jenjang pendidikannya.
+      Contoh:
+      APK SM Kota Banda Aceh Tahun 2013 sebesar 61,32 persen, artinya persentase penduduk berusia 16-18 tahun di Kota Banda Aceh yang bersekolah di tingkat SM sekitar 61 persen.</td>
+      	</tr>
+      </tbody></table>
+    </div>
+
+    <div id="Buta Huruf" class="tabcontent">
+      <h3>&nbsp;&nbsp;&nbsp;&nbsp; ABH</h3>
+      <table class="view-table">
+      	<tbody><tr>
+      		<td width="150" class="label">Nama Indikator</td>
+      		<td>Angka Buta Huruf (ABH)</td>
+      	</tr>
+      		<tr>
+      		<td class="label">Konsep Definisi</td>
+      		<td>Proporsi penduduk usia 15 tahun ke atas yang tidak dapat membaca dan menulis huruf latin dan huruf lainnya terhadap penduduk usia 15 tahun ke atas</td>
+      	</tr>
+
+      	<tr>
+      		<td class="label">Rumusan</td>
+      		<td>
+      			<img style="max-width:100%" src="http://sirusa.bps.go.id/webadmin/indikator/Angka_Buta_Huruf_(ABH).jpg" alt=""><br>		</td>
+      	</tr>
+      			<tr>
+      			<td class="label">Kegunaan</td>
+
+      			<td>Untuk melihat pencapaian indikator dasar yang telah dicapai oleh suatu daerah, karena membaca merupakan dasar utama dalam memperluas ilmu pengetahuan. AMH merupakan indikator penting untuk melihat sejauh mana penduduk suatu daerah terbuka terhadap pengetahuan.</td>
+      	</tr>
+      				<tr>
+      			<td class="label">Interpretasi</td>
+
+      			<td>Tingkat buta huruf yang rendah menunjukkan adanya sebuah sistem pendidikan dasar yang efektif dan/atau program keaksaraan yang memungkinkan sebagian besar penduduk untuk memperoleh kemampuan menggunakan kata-kata tertulis dalam kehidupan sehari-hari dan melanjutkan pembelajarannya</td>
+      	</tr>
+      </tbody></table>
+    </div>
+
+    <div class="footer">
+      <p style="text-align:left;">
+          &emsp;Copyright &copy; Kelompok 5 3SD1
+          <span style="float:right;">
+              Adi Habibi Harahap | Alfi Nurrahmah | Elsa Kartika Vitriani Marpaung | Irvan Permana Bustami | Lara Ayu Cahyaningtyas&emsp;
+          </span>
+      </p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+
+    function openVar(evt, varName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(varName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+  </body>
+</html>
